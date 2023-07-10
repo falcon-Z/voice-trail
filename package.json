@@ -9,7 +9,7 @@
     "build:watch": "vite build -w",
     "preview": "vite preview"
   },
-  "devDependencies": {
-    "vite": "^4.3.9"
+  "dependencies": {
+    "@types/chrome": "^0.0.239"
   }
 }

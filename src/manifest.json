@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest.json",
+  "manifest_version": 3,
+  "name": "Voice Trail",
+  "description": "An exten to Read Social media posts and articles out loud creating new expereinces",
+  "version": "0.0.1",
+  "action": {
+    "default_icon": {
+      "16": "./icons/logo.png",
+      "48": "./icons/logo.png",
+      "128": "./icons/logo.png"
+    }
+  },
+  "permissions": ["activetab", "scripting", "storage"],
+  "background": {
+    "service_worker": "./scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["./scripts/content.js"],
+      "matches": [
+        "https://twitter.com/*",
+        "https://*.reddit.com/*",
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ]
+}
